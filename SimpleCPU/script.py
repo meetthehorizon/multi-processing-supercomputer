@@ -8,18 +8,21 @@ import torchvision.transforms as transforms
 
 is_exists = os.path.exists("./data")
 
+print("downloading train dataset....")
 train_dataset = datasets.MNIST(
     root="./data", train=True, download=is_exists, transform=transforms.ToTensor()
 )
-
+print("downloading test dataset....")
 test_dataset = datasets.MNIST(
     root="./data", train=False, download=is_exists, transform=transforms.ToTensor()
 )
 
+print("loading train dataset....")
 train_loader = torch.utils.data.DataLoader(
     dataset=train_dataset, batch_size=64, shuffle=True
 )
 
+print("loading test dataset....")
 test_loader = torch.utils.data.DataLoader(
     dataset=test_dataset, batch_size=64, shuffle=True
 )
@@ -42,6 +45,7 @@ class SimpleCNN(nn.Module):
         return x
 
 
+print("Creating model....")
 model = SimpleCNN()
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
@@ -76,6 +80,7 @@ def check_accuracy(loader, model):
     num_correct = 0
     num_samples = 0
     model.eval()
+    print(f"Checking accuracy on {loader.dataset}")
 
     with torch.no_grad():
         for x, y in loader:
