@@ -1,3 +1,4 @@
+import sys
 import torch
 import torch.nn as nn
 
@@ -29,19 +30,24 @@ class SimpleModel(nn.Module):
         return output
 
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+if __name__ == "__main__":
+    sys.stdout = open("DataParallel/output.txt", "w")
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-rand_loader = DataLoader(dataset=RandomDataset(10, 1000), batch_size=2, shuffle=True)
-model = SimpleModel(input_size=10, output_size=5).to(device)
+    rand_loader = DataLoader(
+        dataset=RandomDataset(10, 1000), batch_size=2, shuffle=True
+    )
+    model = SimpleModel(input_size=10, output_size=5).to(device)
 
-if torch.device_count() > 1:
-    print("Let's use", torch.device_count(), "GPUs!")
-    model = nn.DataParallel(model)
-else:
-    print("No GPU available")
+    if torch.device_count() > 1:
+        print("Let's use", torch.device_count(), "GPUs!")
+        model = nn.DataParallel(model)
+    else:
+        print("No GPU available")
 
+    for data in rand_loader:
+        input = data.to(device)
+        output = model(input)
+        print("Outside: input size", input.size(), "output_size", output.size())
 
-for data in rand_loader:
-    input = data.to(device)
-    output = model(input)
-    print("Outside: input size", input.size(), "output_size", output.size())
+    sys.stdout.close()
