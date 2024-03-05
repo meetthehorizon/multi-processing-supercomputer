@@ -11,5 +11,5 @@ module load python3.8
 source /home/kshitij.cse22.itbhu/venv/bin/activate
 
 echo "Starting the job"
-python3 script.py
+python3 -u script.py
 echo "Job finished"
