@@ -1,0 +1,67 @@
+==========================================
+SLURM_CLUSTER_NAME = param-shivay
+SLURM_JOB_ACCOUNT = comp_sci_engg
+SLURM_JOB_ID = 948763
+SLURM_JOB_NAME = myjob
+SLURM_JOB_NODELIST = cn015
+SLURM_JOB_USER = kshitij.cse22.itbhu
+SLURM_JOB_UID = 6033
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 286382
+SLURM_SUBMIT_DIR = /home/kshitij.cse22.itbhu/multi-processing-supercomputer/basic IO
+SLURM_CPUS_ON_NODE = 1
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 286382
+==========================================
+Starting the job
+65:01:14
+65:01:15
+65:01:16
+65:01:17
+65:01:18
+65:01:19
+65:01:20
+65:01:21
+65:01:22
+65:01:23
+65:01:25
+65:01:26
+65:01:27
+65:01:28
+65:01:29
+65:01:30
+65:01:31
+65:01:32
+65:01:33
+65:01:34
+65:01:36
+65:01:37
+65:01:38
+65:01:39
+65:01:40
+65:01:41
+65:01:42
+65:01:43
+65:01:44
+65:01:45
+65:01:46
+65:01:47
+65:01:48
+65:01:49
+65:01:50
+65:01:51
+65:01:52
+65:01:53
+65:01:54
+65:01:55
+65:01:56
+65:01:57
+65:01:58
+65:01:59
+65:01:00
+65:01:01
+65:01:03
+65:01:04
+65:01:05
+65:01:06
+Job finished

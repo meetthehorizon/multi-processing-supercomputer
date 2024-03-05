@@ -1,0 +1,17 @@
+==========================================
+SLURM_CLUSTER_NAME = param-shivay
+SLURM_JOB_ACCOUNT = comp_sci_engg
+SLURM_JOB_ID = 948734
+SLURM_JOB_NAME = myjob
+SLURM_JOB_NODELIST = cn015
+SLURM_JOB_USER = kshitij.cse22.itbhu
+SLURM_JOB_UID = 6033
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 280807
+SLURM_SUBMIT_DIR = /home/kshitij.cse22.itbhu/multi-processing-supercomputer/DataParallel
+SLURM_CPUS_ON_NODE = 1
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 280807
+==========================================
+Starting the job
+Job finished
