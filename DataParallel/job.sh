@@ -1,12 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=DataParallel
-#SBATCH --output=DataParallel.out
-#SBATCH --error=DataParallel.err
-#SBATCH --time=00:10:00
-#SBATCH -N 1
-#SBATCH --ntasks-per-node=100
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:2
+#SBATCH --job-name=myjob
+#SBATCH --output=output.log
+#SBATCH --error=error.log
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=1:00:00
 
 module load python3.8
 source /home/kshitij.cse22.itbhu/venv/bin/activate
