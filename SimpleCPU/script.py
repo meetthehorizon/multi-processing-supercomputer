@@ -8,11 +8,11 @@ import torchvision.transforms as transforms
 
 print("downloading train dataset....")
 train_dataset = datasets.MNIST(
-    root="../data", train=True, download=False, transform=transforms.ToTensor()
+    root="data", train=True, download=False, transform=transforms.ToTensor()
 )
 print("downloading test dataset....")
 test_dataset = datasets.MNIST(
-    root="../data", train=False, download=False, transform=transforms.ToTensor()
+    root="data", train=False, download=False, transform=transforms.ToTensor()
 )
 
 print("loading train dataset....")

@@ -1,17 +1,58 @@
 ==========================================
 SLURM_CLUSTER_NAME = param-shivay
 SLURM_JOB_ACCOUNT = comp_sci_engg
-SLURM_JOB_ID = 948762
+SLURM_JOB_ID = 949170
 SLURM_JOB_NAME = cpu
-SLURM_JOB_NODELIST = cn015
+SLURM_JOB_NODELIST = cn067
 SLURM_JOB_USER = kshitij.cse22.itbhu
 SLURM_JOB_UID = 6033
 SLURM_JOB_PARTITION = cpu
-SLURM_TASK_PID = 285880
+SLURM_TASK_PID = 307492
 SLURM_SUBMIT_DIR = /home/kshitij.cse22.itbhu/multi-processing-supercomputer/SimpleCPU
 SLURM_CPUS_ON_NODE = 1
 SLURM_NTASKS = 1
-SLURM_TASK_PID = 285880
+SLURM_TASK_PID = 307492
 ==========================================
 Starting the job
+downloading train dataset....
+downloading test dataset....
+loading train dataset....
+loading test dataset....
+Creating model....
+Epoch 0
+Batch 0 Loss: 2.3221569061279297
+Batch 100 Loss: 0.5505421161651611
+Batch 200 Loss: 0.2603582441806793
+Batch 300 Loss: 0.4848511517047882
+Batch 400 Loss: 0.2878384292125702
+Batch 500 Loss: 0.3524034321308136
+Batch 600 Loss: 0.20681151747703552
+Batch 700 Loss: 0.24278534948825836
+Batch 800 Loss: 0.19460424780845642
+Batch 900 Loss: 0.21619798243045807
+Epoch 1
+Batch 0 Loss: 0.24927456676959991
+Batch 100 Loss: 0.2075732797384262
+Batch 200 Loss: 0.11757903546094894
+Batch 300 Loss: 0.25194552540779114
+Batch 400 Loss: 0.2426050454378128
+Batch 500 Loss: 0.0330200158059597
+Batch 600 Loss: 0.1097726970911026
+Batch 700 Loss: 0.05737194046378136
+Batch 800 Loss: 0.04583393782377243
+Batch 900 Loss: 0.10954134166240692
+Checking accuracy on Dataset MNIST
+    Number of datapoints: 60000
+    Root location: data
+    Split: Train
+    StandardTransform
+Transform: ToTensor()
+Accuracy on training set: 96.75
+Checking accuracy on Dataset MNIST
+    Number of datapoints: 10000
+    Root location: data
+    Split: Test
+    StandardTransform
+Transform: ToTensor()
+Accuracy on test set: 96.34
 Job finished

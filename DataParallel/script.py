@@ -6,15 +6,13 @@ import torch.optim as optim
 import torchvision.datasets as datasets
 import torchvision.transforms as transforms
 
-is_exists = os.path.exists("./data")
-
 print("downloading train dataset....")
 train_dataset = datasets.MNIST(
-    root="../data", train=True, download=False, transform=transforms.ToTensor()
+    root="data", train=True, download=False, transform=transforms.ToTensor()
 )
 print("downloading test dataset....")
 test_dataset = datasets.MNIST(
-    root="../data", train=False, download=False, transform=transforms.ToTensor()
+    root="data", train=False, download=False, transform=transforms.ToTensor()
 )
 
 print("loading train dataset....")
