@@ -17,12 +17,12 @@ test_dataset = datasets.MNIST(
 
 print("loading train dataset....")
 train_loader = torch.utils.data.DataLoader(
-    dataset=train_dataset, batch_size=64, shuffle=True, num_workers=8
+    dataset=train_dataset, batch_size=64, shuffle=True
 )
 
 print("loading test dataset....")
 test_loader = torch.utils.data.DataLoader(
-    dataset=test_dataset, batch_size=64, shuffle=True, num_workers=8
+    dataset=test_dataset, batch_size=64, shuffle=True
 )
 
 
